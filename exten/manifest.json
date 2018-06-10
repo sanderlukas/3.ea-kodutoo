@@ -1,0 +1,10 @@
+{
+  "name": "NewTabber",
+  "version": "1.0",
+  "description": "Get a new tab!",
+  "permissions": ["activeTab", "storage"],
+  "background":{
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2
+}
