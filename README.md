@@ -3,7 +3,9 @@
 Kodutööna peab looma Chrome extension'i selliselt, et nõuded oleksid täidetud. Soovi korral võib ka teha Firefox'ile.
 
 **Töö on soovitatav teha kahekesi!**
+
 Alguses üritasin saada tööle annyang teeki(Speech recognition - kuulab mikrofoni), et ta avaks kõne peale veebil lingitud hüperlingi, kuid ebaõnnestus. Hetkel on extension'i funktsionaalsus body fondi suuruse muutmises popup'is antud nuppudega.
+
 ## Nõuded
 
 1. Kirjelda README.md failis, mida rakendus teeb. 
