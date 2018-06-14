@@ -2,26 +2,27 @@
 
 const sizeUpBtn = document.getElementById('sizeUp')
 const sizeDownBtn = document.getElementById('sizeDown')
-let size = 12
+let size
 
 sizeUpBtn.onclick = function () {
-    console.log("suurem")
+    size = localStorage.getItem('size')
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         chrome.tabs.executeScript(
             {code: 'document.body.style.fontSize = "' + size + 'px"'})
       })
-    size = size + 2
+    size = parseInt(size) + 2
+    localStorage.setItem('size', size)
 }
 
 sizeDownBtn.onclick = function () {
-    console.log("väiksem")
+    size = localStorage.getItem('size')
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         chrome.tabs.executeScript(
             {code: 'document.body.style.fontSize = "' + size + 'px"'})
       })
-    if (size <= 8) {
-      size = 8
-    } else {
-      size = size - 2
+    size = parseInt(size) - 2
+    if (size <= 10) {
+      size = 10
     }
+    localStorage.setItem('size', size)
 }
